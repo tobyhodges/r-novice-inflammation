@@ -61,6 +61,7 @@ jobs:
         with:
           WORKBENCH_TAG: ${{ vars.WORKBENCH_TAG }}
           renv-needed: ${{ steps.build-check.outputs.renv-needed }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
   full-build:
     name: "Build Full Site"
