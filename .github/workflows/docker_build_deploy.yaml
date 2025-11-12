@@ -115,6 +115,7 @@ jobs:
           LESSON_PATH: ${{ vars.LESSON_PATH || '/home/rstudio/lesson' }}
           role-to-assume: ${{ secrets.AWS_GH_OIDC_ARN }}
           aws-region: ${{ secrets.AWS_GH_OIDC_REGION }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: "Run Container and Build Site"
         id: build-and-deploy
