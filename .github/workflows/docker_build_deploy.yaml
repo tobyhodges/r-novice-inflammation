@@ -127,6 +127,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [preflight]
     permissions:
+      actions: write  # This is critical!
       contents: write
       pull-requests: write
       id-token: write # OIDC permission required
